@@ -25,7 +25,12 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info("data ingestion started")
         try:
-            data=pd.read_csv("https://raw.githubusercontent.com/sidhyaashu/Project_data/master/train.csv.zip")
+            local_data_path = Path(self.ingestion_config.raw_data_path)
+            if not local_data_path.exists():
+                raise FileNotFoundError(
+                    f"Expected local dataset at {local_data_path}. Add the raw CSV before running ingestion."
+                )
+            data=pd.read_csv(local_data_path)
             logging.info(" reading a df")
 
             os.makedirs(os.path.dirname(os.path.join(self.ingestion_config.raw_data_path)),exist_ok=True)

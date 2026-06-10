@@ -19,7 +19,6 @@ setuptools.setup(
     description="Mlpos foundation project",
     long_description_content_type="text/markdown",
     long_description=long_description,
-    url="https://github.com/sidhyaashu/MLOps-End-To-End-Project.git",
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src")
 )
