@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GemValue Ops Studio - Result</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            color: #17202a;
+            background: linear-gradient(135deg, #f7fbff 0%, #dfeef0 100%);
+        }
+
+        .result {
+            width: min(560px, 100%);
+            background: white;
+            border: 1px solid #d9e5e7;
+            border-radius: 8px;
+            padding: 32px;
+            text-align: center;
+            box-shadow: 0 18px 45px rgba(39, 65, 72, 0.11);
+        }
+
+        .eyebrow {
+            color: #2d6a6a;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            margin-bottom: 14px;
+        }
+
+        .price {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 78px;
+            min-width: 220px;
+            margin: 12px 0 24px;
+            padding: 12px 22px;
+            border-radius: 8px;
+            color: #1b6f73;
+            background: #edf7f7;
+            font-size: clamp(2rem, 9vw, 3.4rem);
+            font-weight: 800;
+        }
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 0 18px;
+            border-radius: 8px;
+            color: #fff;
+            background: #1b6f73;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <main class="result">
+        <div class="eyebrow">GemValue Ops Studio</div>
+        <h1>Estimated gemstone price</h1>
+        <div class="price">{{ final_result }}</div>
+        <p><a href="/predict">Run another estimate</a></p>
+    </main>
+</body>
+</html>

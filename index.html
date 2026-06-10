@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GemValue Ops Studio</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            color: #17202a;
+            background: linear-gradient(135deg, #f7fbff 0%, #dfeef0 48%, #f5ead9 100%);
+        }
+        main {
+            width: min(1040px, calc(100% - 32px));
+            margin: 0 auto;
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            align-items: center;
+            gap: 32px;
+        }
+        .eyebrow {
+            color: #2d6a6a;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        h1 {
+            margin: 12px 0 16px;
+            font-size: clamp(2.2rem, 6vw, 4.6rem);
+            line-height: 1;
+        }
+        p {
+            max-width: 620px;
+            color: #40515c;
+            font-size: 1.06rem;
+            line-height: 1.7;
+        }
+        .panel {
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid rgba(23, 32, 42, 0.08);
+            background: rgba(255, 255, 255, 0.76);
+            box-shadow: 0 18px 45px rgba(39, 65, 72, 0.13);
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(23, 32, 42, 0.08);
+        }
+        .row:last-child { border-bottom: 0; }
+        strong { color: #1b6f73; }
+        @media (max-width: 780px) {
+            main {
+                grid-template-columns: 1fr;
+                align-content: center;
+                padding: 48px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="eyebrow">MLOps regression workspace</div>
+            <h1>GemValue Ops Studio</h1>
+            <p>
+                A refined gemstone price prediction project with a Flask prediction UI, reusable pipelines,
+                model artifacts, and deployment-friendly documentation.
+            </p>
+        </section>
+        <aside class="panel" aria-label="Project summary">
+            <div class="row"><span>Use case</span><strong>Price prediction</strong></div>
+            <div class="row"><span>Stack</span><strong>Flask + sklearn</strong></div>
+            <div class="row"><span>Repo focus</span><strong>MLOps workflow</strong></div>
+        </aside>
+    </main>
+</body>
+</html>

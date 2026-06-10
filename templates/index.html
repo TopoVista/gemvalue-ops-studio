@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GemValue Ops Studio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            color: #17202a;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(255, 213, 128, 0.28), transparent 32%),
+                linear-gradient(135deg, #f7fbff 0%, #dfeef0 48%, #f5ead9 100%);
+        }
+
+        .container {
+            width: min(920px, 100%);
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .intro {
+            padding: 10px;
+        }
+
+        .eyebrow {
+            color: #2d6a6a;
+            font-weight: 700;
+            letter-spacing: 0;
+            text-transform: uppercase;
+            font-size: 0.78rem;
+            margin-bottom: 14px;
+        }
+
+        h1 {
+            font-size: clamp(2.1rem, 6vw, 4rem);
+            line-height: 1.02;
+            margin-bottom: 18px;
+        }
+
+        p {
+            color: #40515c;
+            font-size: 1.06rem;
+            line-height: 1.7;
+            max-width: 620px;
+            margin-bottom: 28px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            padding: 0 20px;
+            border-radius: 8px;
+            color: #fff;
+            background: #1b6f73;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .secondary {
+            color: #1b6f73;
+            background: #ffffff;
+            border: 1px solid rgba(27, 111, 115, 0.28);
+        }
+
+        .panel {
+            background: rgba(255, 255, 255, 0.78);
+            border: 1px solid rgba(23, 32, 42, 0.08);
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 18px 45px rgba(39, 65, 72, 0.13);
+        }
+
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(23, 32, 42, 0.08);
+        }
+
+        .metric:last-child {
+            border-bottom: 0;
+        }
+
+        .metric strong {
+            font-size: 1.35rem;
+            color: #1b6f73;
+        }
+
+        .metric span {
+            color: #65727b;
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 780px) {
+            body {
+                align-items: flex-start;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <section class="intro">
+            <div class="eyebrow">MLOps regression workspace</div>
+            <h1>GemValue Ops Studio</h1>
+            <p>
+                A polished Flask and MLOps workflow for estimating gemstone prices, from feature capture through
+                prediction, evaluation, and deployment-ready packaging.
+            </p>
+            <div class="actions">
+                <a href="/predict">Open predictor</a>
+                <a class="secondary" href="https://github.com/" target="_blank" rel="noreferrer">View repository</a>
+            </div>
+        </section>
+
+        <aside class="panel" aria-label="Project highlights">
+            <div class="metric">
+                <span>Pipeline style</span>
+                <strong>Batch + Web</strong>
+            </div>
+            <div class="metric">
+                <span>Primary model task</span>
+                <strong>Regression</strong>
+            </div>
+            <div class="metric">
+                <span>Deployment surface</span>
+                <strong>Flask UI</strong>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
